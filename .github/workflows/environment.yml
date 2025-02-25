@@ -1,4 +1,4 @@
-name: Intermediate environment variables
+name: Environment
 
 on: push
 
