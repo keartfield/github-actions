@@ -1,0 +1,21 @@
+name: Manual
+
+on:
+  # 手動実行
+  workflow_dispatch:
+    inputs:
+      # 入力パラメータ名
+      greeting:
+        # パラメータの型
+        type: string
+        # パラメータのデフォルト値
+        default: Hello
+        # パラメータの必須フラグ
+        required: true
+        # パラメータの説明
+        description: A cheerful word
+jobs:
+  run:
+    runs-on: ubunts-latest
+    steps:
+      - run: echo "${{ inputs.greeting }}"
