@@ -1,0 +1,12 @@
+name: Intermediate environment variables
+
+on: push
+
+jobs:
+  print:
+    runs-on: ubuntu-latest
+    env:
+      MESSAGE: Hi
+      ACTOR: ${{ github.actor }}
+    steps:
+      - run: echo "${MESSAGE}, ${ACTOR}"
