@@ -6,7 +6,7 @@ jobs:
   dump:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "${ CONTEXT }"
-      env:
-        CONTEXT: ${{ toJSON(github) }}
-    
+      - run: echo "${CONTEXT}"
+        env:
+          CONTEXT: ${{ toJSON(github) }}
+  
