@@ -1,0 +1,15 @@
+name: Share
+
+on: push
+
+jobs:
+  share:
+    runs-on: ubuntu-latest
+    steps:
+      # ステップIDを設定
+      - id: parent
+        run: echo "result=Hello" >> "${GITHUB_OUTPUT}"
+      - env:
+        # stepsコンテキストから参照
+        RESULT: ${{ steps.parent.outputs.result }}
+      run: echo "${RESULT}"
