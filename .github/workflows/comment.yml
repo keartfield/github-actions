@@ -5,7 +5,7 @@ on: pull_request
 jobs:
   comment:
     runs-on: ubuntu-latest
-    permission:
+    permissions:
       pull-requests: write
       contents: read
     steps:
