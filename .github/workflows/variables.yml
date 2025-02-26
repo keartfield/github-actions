@@ -1,0 +1,11 @@
+name: Variables
+
+on: push
+
+jobs:
+  print:
+    runs-on: ubuntu-latest
+    env:
+      EPITAPH: ${{ vars.EPITAPH }}
+    steps:
+     - run: echo "${EPITAPH}"
